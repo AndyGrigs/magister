@@ -11,6 +11,8 @@ $fontColor: #e1ebea;
   box-sizing: border-box;
   list-style: none;
 }
+:focus,:active {outline: none} 
+a:focus,a:active {outline: none} 
 
 body {
   background-color: $bgColor;
@@ -106,6 +108,9 @@ body {
     input{
       border: 0;
       padding: 3px;
+      &:focus{
+        border: 0;
+      }
     }
   }
 }
