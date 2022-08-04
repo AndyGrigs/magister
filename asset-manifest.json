@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/magiter/static/css/main.5a6808e3.css",
+    "main.js": "/magiter/static/js/main.068ee75f.js",
+    "static/media/book.jpg": "/magiter/static/media/book.8185acc47895810fae77.jpg",
+    "index.html": "/magiter/index.html",
+    "main.5a6808e3.css.map": "/magiter/static/css/main.5a6808e3.css.map",
+    "main.068ee75f.js.map": "/magiter/static/js/main.068ee75f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a6808e3.css",
+    "static/js/main.068ee75f.js"
+  ]
+}
