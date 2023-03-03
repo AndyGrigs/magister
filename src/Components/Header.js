@@ -17,7 +17,7 @@ export default function Header(){
 
           <div className="contRight">
             <div className="contRighttext">
-              <p>Мої репетитори</p>
+              <p>Реєстрація</p>
             </div>
 
           </div>

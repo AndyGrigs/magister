@@ -1,42 +1,38 @@
-import React from "react";
-import Header from "./Components/Header/Header.js"
-import Descr from "./Components/Description/Descr.js"
-import Drawer from "./Components/Drawer/Drawer.js"
-import SearchBar from "./Components/Search/Search.js"
-import Cards from "./Components/Cards/Cards.js"
+import React, {useState} from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import Header from "./Components/Header.js"
+import Descr from "./Components/Descr.js"
+import Drawer from "./Components/Drawer.js"
+import SearchBar from "./Components/Search.js"
+import Cards from "./Components/Cards.js"
+import Login from "./Components/Login.js"
 
 
 function App() {
+  const[isAuthenticated, setIsAuthenticated] = useState(false)
   return (
+    <BrowserRouter>
       <div className="App">
-      
-      <Drawer />
-      <Header />
-      <Descr />
-      <SearchBar />
+        <Drawer />
+        <Header />
+        <Descr />
+        <SearchBar />
 
-        <div className="cardContainer">   
-            <div className="card__container">
-                <Cards />
-            </div>
+        <div className="cardContainer">
+          <div className="card__container">
+            <Cards />
+          </div>
         </div>
-
-     
-
-      
-   
-
-
-        
-
-
-
-
-    </div>
+        <Route path="/login" render={()=>(
+          isAuthenticated ? (
+            <ProtectedComponent />
+          ): (
+            <Login to="/login" />
+          )
+        )}/>
+      </div>
+    </BrowserRouter>
   );
 }
 
 export default App;
-
-
-/*АКСУК - Академiя Культурноï Спадщини Украïнського Козацтва */
